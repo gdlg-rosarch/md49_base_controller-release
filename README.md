@@ -17,6 +17,3 @@ Versions of tools used:
 - rosdep version: `0.11.4`
 - rosdistro version: `0.4.2`
 - vcstools version: `0.1.38`
-
-
-# md49_base_controller-release
