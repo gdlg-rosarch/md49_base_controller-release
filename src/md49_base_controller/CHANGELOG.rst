@@ -2,6 +2,9 @@
 Changelog for package md49_base_controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.3 (2015-12-22)
+------------------
+
 0.1.2 (2015-12-22)
 ------------------
 * Add separate package md49_serialport as library for serial communication with md49
