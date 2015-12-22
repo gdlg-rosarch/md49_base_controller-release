@@ -1,3 +1,4 @@
-# md49_base_controller
+ROS Package md49_serialport
+=============
 
-ROS Package for the serial dual motor driver board MD49, designed to use with two EMG49 motors
+roscpp library for serial communications with md49 used by md49_base_controller
