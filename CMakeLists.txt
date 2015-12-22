@@ -10,12 +10,14 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
+  md49_messages
+  md49_serialport
 )
 
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-# find_package(serialport REQUIRED)
+find_package(md49_serialport REQUIRED)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -48,11 +50,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(
-   FILES
-   md49_data.msg
-   md49_encoders.msg
-)
+#add_message_files(
+#   FILES
+#   md49_data.msg
+#   md49_encoders.msg
+#)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -75,10 +77,10 @@ add_message_files(
 #   std_msgs
 # )
 
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-)
+#generate_messages(
+#  DEPENDENCIES
+#  std_msgs
+#)
 
 ###################################
 ## catkin specific configuration ##
@@ -90,7 +92,7 @@ generate_messages(
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
+   INCLUDE_DIRS include
 #  LIBRARIES base_controller
    CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs message_runtime 
 #  DEPENDS system_lib
@@ -115,15 +117,19 @@ include_directories(
 
 ## Declare a cpp executable
 # add_executable(base_controller_node src/base_controller_node.cpp)
+add_executable(md49_base_controller src/md49_base_controller/md49_base_controller_node.cpp include/md49_base_controller/md49_base_controller_class.h)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(base_controller_node base_controller_generate_messages_cpp)
+add_dependencies(md49_base_controller md49_messages_generate_messages_cpp)
+add_dependencies(md49_base_controller md49_base_controller_EXPORTED_TARGETS)
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(base_controller_node
 #   ${catkin_LIBRARIES}
 # )
+target_link_libraries(md49_base_controller ${catkin_LIBRARIES})
 
 #############
 ## Install ##
@@ -140,18 +146,22 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS base_controller base_controller_node
+install(TARGETS md49_base_controller
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark cpp header files for installation
-# install(DIRECTORY include/${PROJECT_NAME}/
-#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-#   FILES_MATCHING PATTERN "*.h"
-#   PATTERN ".svn" EXCLUDE
-# )
+install(DIRECTORY include/${PROJECT_NAME}/
+   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+   FILES_MATCHING PATTERN "*.h"
+   PATTERN ".svn" EXCLUDE
+)
+
+install(DIRECTORY launch config
+    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES
@@ -173,9 +183,6 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(md49_base_controller src/md49_base_controller/md49_base_controller_node.cpp include/md49_base_controller/md49_base_controller_class.h include/md49_serialport/serialport.h include/md49_serialport/serialport.cpp)
-target_link_libraries(md49_base_controller ${catkin_LIBRARIES})
-add_dependencies(md49_base_controller md49_base_controller_generate_messages_cpp)
-add_dependencies(md49_base_controller md49_base_controller_EXPORTED_TARGETS)
+
 
 
