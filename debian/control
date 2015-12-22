@@ -1,0 +1,12 @@
+Source: ros-indigo-md49-base-controller
+Section: misc
+Priority: extra
+Maintainer: Fabian Prinzing <scheik.todeswache@googlemail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin, ros-indigo-geometry-msgs, ros-indigo-md49-messages, ros-indigo-md49-serialport, ros-indigo-message-generation, ros-indigo-roscpp, ros-indigo-rospy, ros-indigo-std-msgs
+Homepage: http://www.the-starbearer.de
+Standards-Version: 3.9.2
+
+Package: ros-indigo-md49-base-controller
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-geometry-msgs, ros-indigo-md49-messages, ros-indigo-md49-serialport, ros-indigo-message-runtime, ros-indigo-roscpp, ros-indigo-rospy, ros-indigo-std-msgs
+Description: The md49_base_controller package
