@@ -1,3 +1,27 @@
+## md49_base_controller (indigo) - 0.1.2-1
+
+The packages in the `md49_base_controller` repository were released into the `indigo` distro by running `/usr/bin/bloom-release md49_base_controller --track indigo --rosdistro indigo` on `Tue, 22 Dec 2015 15:04:37 -0000`
+
+These packages were released:
+- `md49_base_controller`
+- `md49_messages`
+- `md49_serialport`
+
+Version of package(s) in repository `md49_base_controller`:
+- upstream repository: https://github.com/Scheik/md49_base_controller.git
+- release repository: https://github.com/Scheik/md49_base_controller-release.git
+- rosdistro version: `0.1.1-0`
+- old version: `0.1.2-0`
+- new version: `0.1.2-1`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.2`
+- vcstools version: `0.1.38`
+
+
 ## md49_base_controller (indigo) - 0.1.2-0
 
 The packages in the `md49_base_controller` repository were released into the `indigo` distro by running `/usr/bin/bloom-release md49_base_controller --track indigo --rosdistro indigo` on `Tue, 22 Dec 2015 14:50:53 -0000`
