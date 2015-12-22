@@ -1,0 +1,8 @@
+ros-indigo-md49-serialport (0.1.2-0saucy) saucy; urgency=high
+
+  * Added this separate package md49_serialport as library for serial communication with md49
+  * Contributors: Scheik
+
+ -- Fabian Prinzing <scheik.todeswache@googlemail.com>  Mon, 21 Dec 2015 23:00:00 -0000
+
+
