@@ -1,0 +1,12 @@
+Source: ros-groovy-md49-messages
+Section: misc
+Priority: extra
+Maintainer: Fabian Prinzing <scheik.todeswache@googlemail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-groovy-catkin, ros-groovy-message-generation, ros-groovy-std-msgs
+Homepage: http://www.the-starbearer.de
+Standards-Version: 3.9.2
+
+Package: ros-groovy-md49-messages
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-message-runtime, ros-groovy-std-msgs
+Description: The md49_messages package
