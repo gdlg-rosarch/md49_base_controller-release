@@ -1,0 +1,12 @@
+Source: ros-jade-md49-serialport
+Section: misc
+Priority: extra
+Maintainer: Fabian Prinzing <scheik.todeswache@googlemail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-catkin, ros-jade-roscpp
+Homepage: http://www.the-starbearer.de
+Standards-Version: 3.9.2
+
+Package: ros-jade-md49-serialport
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jade-roscpp
+Description: The md49_serialport package
