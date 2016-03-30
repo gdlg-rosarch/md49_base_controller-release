@@ -1,3 +1,27 @@
+## md49_base_controller (kinetic) - 0.1.4-0
+
+The packages in the `md49_base_controller` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release md49_base_controller --track kinetic --rosdistro kinetic` on `Wed, 30 Mar 2016 18:44:54 -0000`
+
+These packages were released:
+- `md49_base_controller`
+- `md49_messages`
+- `md49_serialport`
+
+Version of package(s) in repository `md49_base_controller`:
+- upstream repository: https://github.com/Scheik/md49_base_controller.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.1.4-0`
+
+Versions of tools used:
+- bloom version: `0.5.20`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.4`
+- rosdistro version: `0.4.2`
+- vcstools version: `0.1.38`
+
+
 ## md49_base_controller (jade) - 0.1.4-0
 
 The packages in the `md49_base_controller` repository were released into the `jade` distro by running `/usr/bin/bloom-release md49_base_controller --track jade --rosdistro jade --new-track` on `Sun, 27 Dec 2015 14:02:06 -0000`
