@@ -1,0 +1,30 @@
+ros-kinetic-md49-base-controller (0.1.4-0wily) wily; urgency=high
+
+  * No changes, keep release on track with md49_base_controller
+  * Contributors: Fabian Prinzing
+
+ -- Fabian Prinzing <scheik.todeswache@googlemail.com>  Wed, 23 Dec 2015 23:00:00 -0000
+
+ros-kinetic-md49-base-controller (0.1.3-0wily) wily; urgency=high
+
+  * Fixed issue with missing executable md49_base_controller
+  * Contributors: Fabian Prinzing
+
+ -- Fabian Prinzing <scheik.todeswache@googlemail.com>  Mon, 21 Dec 2015 23:00:00 -0000
+
+ros-kinetic-md49-base-controller (0.1.2-0wily) wily; urgency=high
+
+  * Added separate package md49_serialport as library for serial communication with md49
+  * Separated custom messages from md49_base_controller package into its own package md49_messages
+  * Contributors: Fabian Prinzing
+
+ -- Fabian Prinzing <scheik.todeswache@googlemail.com>  Mon, 21 Dec 2015 23:00:00 -0000
+
+ros-kinetic-md49-base-controller (0.1.1-0wily) wily; urgency=high
+
+  * Initial Release
+  * Contributors: Fabian Prinzing
+
+ -- Fabian Prinzing <scheik.todeswache@googlemail.com>  Sat, 19 Dec 2015 23:00:00 -0000
+
+
